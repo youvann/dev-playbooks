@@ -1,0 +1,5 @@
+---
+- name: Copying file1 to dest directory
+  template:
+    src: ~/sandbox/ansible/src/file1
+    dest: ~/sandbox/ansible/dest

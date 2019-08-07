@@ -1,0 +1,35 @@
+---
+brew_tap:
+  - homebrew/cask-fonts
+  - AdoptOpenJDK/openjdk
+brew_packages:
+  - fd
+  - fzf
+  - jq
+  - tmux
+  - tree
+  - pass
+  - wget
+  - yamllint
+  - zplug
+brew_cask_packages:
+  - adoptopenjdk8
+  - alacritty
+  - alfred
+  - amethyst
+  - calibre
+  - coconutbattery
+  - dashlane
+  - docker
+  - font-fira-code
+  - google-chrome
+  - intellij-idea
+  - karabiner-elements
+  - keybase
+  - pock
+  - pycharm-ce
+  - spark
+  - spotify
+  - sublime-text
+  - transmission
+  - vlc

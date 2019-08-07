@@ -1,0 +1,6 @@
+---
+- name: Copying dotfiles to {{ lookup('env','HOME') }} directory
+  copy:
+    src: "{{ item }}"
+    dest: "{{ lookup('env','HOME') }}"
+  loop: "{{ dotfiles }}"

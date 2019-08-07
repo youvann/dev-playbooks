@@ -1,0 +1,6 @@
+---
+dotfiles:
+  - .zshrc
+  - .zprofile
+  - .vimrc
+  - .tmux.conf

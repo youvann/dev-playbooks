@@ -1,0 +1,20 @@
+---
+- name: homebrew tap
+  homebrew_tap:
+    name: "{{ brew_tap }}"
+    state: present
+
+- name: homebrew
+  homebrew:
+    name: "{{ brew_packages }}"
+    state: present
+
+- name: homebrew cask
+  homebrew_cask:
+    name: "{{ brew_cask_packages }}"
+    state: present
+
+- name: karabiner configuration
+  copy:
+    src: karabiner.json
+    dest: "{{ lookup('env','HOME') }}/.config/karabiner"
