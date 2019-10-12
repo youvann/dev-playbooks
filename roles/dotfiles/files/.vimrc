@@ -66,7 +66,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'pearofducks/ansible-vim' 
+Plug 'pearofducks/ansible-vim'
 
 " Initialize plugin system
 call plug#end()
