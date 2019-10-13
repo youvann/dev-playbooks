@@ -5,23 +5,29 @@
   register: cli_out
 
 - debug:
-    msg: command line tools are already installed
+    msg: command line tools is already installed
   when: cli_out.rc == 1
 
 - name: homebrew tap
   homebrew_tap:
     name: "{{ brew_tap }}"
     state: present
+  tags:
+    - homebrew
 
 - name: homebrew
   homebrew:
     name: "{{ brew_packages }}"
     state: present
+  tags:
+    - homebrew
 
 - name: homebrew cask
   homebrew_cask:
     name: "{{ brew_cask_packages }}"
     state: present
+  tags:
+    - homebrew_cask
 
 - name: karabiner configuration
   copy:
