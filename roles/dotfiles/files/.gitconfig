@@ -1,0 +1,8 @@
+[user]
+	name = youvann
+	email = measkevin@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
