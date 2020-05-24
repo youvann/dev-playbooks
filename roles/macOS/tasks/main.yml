@@ -33,3 +33,13 @@
   copy:
     src: karabiner.json
     dest: "{{ lookup('env','HOME') }}/.config/karabiner"
+
+- name: Include alfred task in play
+  include: alfred.yml
+  tags:
+    - alfred
+
+- name: Include yabai task in play
+  include: yabai.yml
+  tags:
+    - yabai

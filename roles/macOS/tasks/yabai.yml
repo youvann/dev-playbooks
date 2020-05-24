@@ -1,0 +1,11 @@
+---
+- name: Creating {{ lookup('env','HOME') }}/.config/skhd directory
+  file:
+    path: $HOME/.config/skhd
+    state: directory
+    mode: 0700
+
+- name: Copying skhdrc file to {{ lookup('env','HOME') }}/.config/skhd/
+  copy:
+    src: yabai/skhdrc
+    dest: $HOME/.config/skhd/

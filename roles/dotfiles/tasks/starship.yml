@@ -1,0 +1,5 @@
+---
+- name: Copying starship.toml to {{ lookup('env','HOME') }}/.config directory
+  copy:
+    src: starship.toml
+    dest: "{{ lookup('env','HOME') }}/.config"

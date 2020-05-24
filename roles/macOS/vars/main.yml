@@ -2,16 +2,38 @@
 brew_tap:
   - homebrew/cask-fonts
   - AdoptOpenJDK/openjdk
+  - amar1729/formulae
+  - simplydanny/pass-extensions
+  - koekeishiya/formulae
+
 brew_packages:
+  - browserpass
   - fd
+  - fpp
   - fzf
+  - go
+  - helm
+  - hugo
   - jq
+  # https://github.com/gokcehan/lf
+  - gnupg
+  - koekeishiya/formulae/yabai
+  - kubectl
+  - lf
+  - mas
+  - minikube
+  - pass-update
+  - pinentry-mac
+  - pgcli
+  - starship
   - tmux
   - tree
   - pass
+  - wallpaper
   - wget
   - yamllint
   - zplug
+
 brew_cask_packages:
   - adoptopenjdk8
   - anki
@@ -23,6 +45,8 @@ brew_cask_packages:
   - dashlane
   - docker
   - font-fira-code
+  - font-hack-nerd-font
+  - firefox
   - google-chrome
   - intellij-idea
   - karabiner-elements
@@ -32,5 +56,6 @@ brew_cask_packages:
   - spark
   - spotify
   - sublime-text
+  - the-unarchiver
   - transmission
   - vlc

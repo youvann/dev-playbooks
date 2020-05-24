@@ -1,0 +1,39 @@
+---
+# https://github.com/roddhjav/pass-import
+- name: "Installing pass-import"
+  shell: |
+    cd /tmp
+    wget https://github.com/roddhjav/pass-import/releases/download/v2.6/pass-import-2.6.tar.gz
+    tar xzf pass-import-2.6.tar.gz
+    mv pass-import-2.6 ~/bin
+    pushd ~/bin/pass-import-2.6
+    make
+    sudo make install PREFIX=/usr/local
+    popd
+    rm -rf pass-import-2.6.tar.gz
+    rm -rf pass-import-2.6
+  register: pass_import_result
+
+- name: "Content of pass_import_result"
+  debug:
+    var: pass_import_result
+
+# https://github.com/passff/passff-host
+- name: "Installing passff-host"
+  shell: VERSION=1.2.1 && curl -sSL https://github.com/passff/passff-host/releases/download/${VERSION}/install_host_app.sh | bash -s -- firefox
+  register: passff_host_result
+
+- name: "Content of passff_host_result"
+  debug:
+    var: passff_host_result
+
+# macOS specific
+- name: "Checking passff-host installation"
+  shell: echo "\x02\x00\x00\x00[]" | $HOME/Library/Application\ Support/Mozilla/NativeMessagingHosts/passff.py | tail -c +4; echo
+  register: passff_host_installation_result
+  tags: passff_host
+
+- name: "Content of passff-host_installation_result"
+  debug:
+    var: passff_host_installation_result
+  tags: passff_host

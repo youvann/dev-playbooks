@@ -3,9 +3,8 @@ source $ZPLUG_HOME/init.zsh
 
 source ~/.zsh_aliases
 
-PATH=$PATH:/Users/youvann/Library/Python/3.7/bin
-
-zplug 'dracula/zsh', as:theme # Load theme file
+#zplug 'dracula/zsh', as:theme # Load theme file
+eval "$(starship init zsh)"
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:1
 zplug "zsh-users/zsh-history-substring-search", defer:2

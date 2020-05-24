@@ -1,0 +1,13 @@
+---
+- name: "Creating $HOME/.alfred directory"
+  file:
+    path: $HOME/.alfred
+    state: directory
+    mode: 0700
+
+- name: Copying alfred workflow to {{ lookup('env','HOME') }}/.alfred directory
+  copy:
+    src: "{{ item }}"
+    dest: "{{ lookup('env','HOME') }}/.alfred"
+  loop:
+    - pass-0.3.1.alfredworkflow

@@ -4,3 +4,6 @@
     src: "{{ item }}"
     dest: "{{ lookup('env','HOME') }}"
   loop: "{{ dotfiles }}"
+
+- name: "Including starship task"
+  include: starship.yml

@@ -1,5 +1,36 @@
 ---
-- name: Copying file1 to dest directory
-  template:
-    src: ~/sandbox/ansible/src/file1
-    dest: ~/sandbox/ansible/dest
+- name: Creating ${HOME}/.config directory
+  file:
+    path: ${HOME}/.config
+    state: directory
+    mode: '0755'
+
+- name: "Creating directory $HOME/.virtualenvs"
+  file:
+    path: $HOME/.virtualenvs
+    state: directory
+    mode: 0700
+
+- name: Installing pip packages
+  pip:
+    name:
+      - virtualenv
+      - virtualenvwrapper
+      - fuzzywuzzy
+    extra_args: --user
+  register: pip_install_result
+
+- name: "Content of pip_install_result"
+  debug:
+    var: pip_install_result
+
+- name: "Copying $HOME/.gnupg/gpg-agent.conf file"
+  copy:
+    src: "gpg-agent.conf"
+    dest: "{{ lookup('env','HOME') }}/.gnupg/"
+
+- name: "Reloading gpg agent"
+  shell: gpg-connect-agent reloadagent /bye
+
+- name: "Including pass"
+  include: pass.yml
