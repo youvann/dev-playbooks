@@ -22,12 +22,15 @@ brew_packages:
   - lf
   - mas
   - minikube
+  - npm
   - pass-update
   - pinentry-mac
   - pgcli
+  - sass/sass/sass
   - starship
   - tmux
   - tree
+  - pandoc
   - pass
   - wallpaper
   - wget
@@ -36,7 +39,6 @@ brew_packages:
 
 brew_cask_packages:
   - adoptopenjdk8
-  - anki
   - alacritty
   - alfred
   - amethyst
@@ -51,6 +53,7 @@ brew_cask_packages:
   - intellij-idea
   - karabiner-elements
   - keybase
+  - mactex
   - pock
   - pycharm-ce
   - spark
