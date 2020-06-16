@@ -5,9 +5,11 @@ brew_tap:
   - amar1729/formulae
   - simplydanny/pass-extensions
   - koekeishiya/formulae
+  - federico-terzi/espanso
 
 brew_packages:
   - browserpass
+  - espanso
   - fd
   - fpp
   - fzf
@@ -50,6 +52,7 @@ brew_cask_packages:
   - font-hack-nerd-font
   - firefox
   - google-chrome
+  - hey
   - intellij-idea
   - karabiner-elements
   - keybase
