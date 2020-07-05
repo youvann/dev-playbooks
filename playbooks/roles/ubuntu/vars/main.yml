@@ -1,6 +1,6 @@
 ---
 repo:
-  - ppa:kgilmer/speed-ricer
+  - "ppa:kgilmer/speed-ricer"
 pkg:
   - python3-pip
 #  - i3-gaps
