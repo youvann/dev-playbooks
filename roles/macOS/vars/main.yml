@@ -64,4 +64,5 @@ brew_cask_packages:
   - sublime-text
   - the-unarchiver
   - transmission
+  - virtualbox
   - vlc
