@@ -1,0 +1,9 @@
+---
+- name : Installing command line tools
+  shell: xcode-select --install
+  ignore_errors: true
+  register: cli_out
+
+- debug:
+    msg: command line tools is already installed
+  when: cli_out.rc == 1

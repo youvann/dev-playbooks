@@ -1,0 +1,5 @@
+---
+- name: karabiner configuration
+  copy:
+    src: karabiner.json
+    dest: "{{ lookup('env','HOME') }}/.config/karabiner"

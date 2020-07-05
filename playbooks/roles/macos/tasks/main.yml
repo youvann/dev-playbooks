@@ -1,0 +1,36 @@
+---
+- name: Include xcode task in play
+  include: xcode.yml
+  tags:
+    - xcode
+    - all
+
+- name: Include karabiner task in play
+  include: karabiner.yml
+  tags:
+    - karabiner
+    - all
+
+- name: Include homebrew task in play
+  include: homebrew.yml
+  tags:
+    - homebrew
+    - all
+
+- name: Include alfred task in play
+  include: alfred.yml
+  tags:
+    - alfred
+    - all
+
+- name: Include yabai task in play
+  include: yabai.yml
+  tags:
+    - yabai
+    - all
+
+- name: Include gpg task in play
+  include: gpg.yml
+  tags:
+    - gpg
+    - all
