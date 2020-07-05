@@ -1,7 +1,7 @@
 ---
 - name: Install apt repository
   apt_repository:
-    repo: "{{ repo }}"
+    repo: "ppa:kgilmer/speed-ricer"
 
 
 - name: Install apt packages
