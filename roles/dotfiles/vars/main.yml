@@ -1,0 +1,13 @@
+---
+dotfiles:
+  - .gitconfig
+  - .tmux.conf
+  - .tmux-theme-dracula.conf
+  - .tmux-theme-palenight.conf
+  - .vimrc
+  - .zprofile
+  - .zshrc
+
+java_home: /linux/adoptopenjdk-8.jdk/Contents/Home
+virtualenvwrapper_script: $HOME/linux/Python/3.7/bin/virtualenvwrapper.sh
+virtualenwrapper_lazy: $HOME/linux/Python/3.7/bin/virtualenvwrapper_lazy.sh

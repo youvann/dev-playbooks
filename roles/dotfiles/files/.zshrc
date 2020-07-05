@@ -9,8 +9,8 @@ eval "$(starship init zsh)"
 zplug "zsh-users/zsh-syntax-highlighting", defer:1
 zplug "zsh-users/zsh-history-substring-search", defer:2
 
-# zplug "plugins/git", from:oh-my-zsh
-# zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/docker", from:oh-my-zsh
 
 zplug "modules/completion", from:prezto
 zplug "modules/history",    from:prezto

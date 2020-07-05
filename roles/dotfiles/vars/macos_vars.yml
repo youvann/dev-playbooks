@@ -1,0 +1,4 @@
+---
+java_home: /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+virtualenvwrapper_script: $HOME/Library/Python/3.7/bin/virtualenvwrapper.sh
+virtualenwrapper_lazy: $HOME/Library/Python/3.7/bin/virtualenvwrapper_lazy.sh

@@ -1,9 +1,0 @@
----
-dotfiles:
-  - .gitconfig
-  - .tmux.conf
-  - .tmux-theme-dracula.conf
-  - .tmux-theme-palenight.conf
-  - .vimrc
-  - .zprofile
-  - .zshrc
