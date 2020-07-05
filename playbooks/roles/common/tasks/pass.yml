@@ -27,7 +27,7 @@
   debug:
     var: passff_host_result
 
-# macOS specific
+# macos specific
 - name: "Checking passff-host installation"
   shell: echo "\x02\x00\x00\x00[]" | $HOME/Library/Application\ Support/Mozilla/NativeMessagingHosts/passff.py | tail -c +4; echo
   register: passff_host_installation_result

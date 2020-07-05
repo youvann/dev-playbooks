@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  remote_user: youvann
+
+  vars_files:
+    - roles/dotfiles/vars/macos.yml
+
+  roles:
+    - role: common
+      tags: common
+    - role: dotfiles
+      tags: dotfiles
+    - role: macos
+      tags: os

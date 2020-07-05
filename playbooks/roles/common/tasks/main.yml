@@ -24,13 +24,5 @@
   debug:
     var: pip_install_result
 
-- name: "Copying $HOME/.gnupg/gpg-agent.conf file"
-  copy:
-    src: "gpg-agent.conf"
-    dest: "{{ lookup('env','HOME') }}/.gnupg/"
-
-- name: "Reloading gpg agent"
-  shell: gpg-connect-agent reloadagent /bye
-
 - name: "Including pass"
   include: pass.yml

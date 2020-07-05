@@ -1,10 +1,14 @@
 ---
 - hosts: localhost
   remote_user: youvann
+
+  vars_files:
+    - roles/dotfiles/vars/ubuntu.yml
+
   roles:
     - role: common
       tags: common
     - role: dotfiles
       tags: dotfiles
-    - role: macOS
-      tags: macOS
+    - role: ubuntu
+      tags: os

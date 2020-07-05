@@ -1,0 +1,15 @@
+---
+- name: Including starship task
+  include: starship.yml
+
+- name: Copying dotfiles (files) to {{ lookup('env','HOME') }} directory
+  copy:
+    src: "{{ item }}"
+    dest: "{{ lookup('env','HOME') }}"
+  loop: "{{ files }}"
+
+- name: Copying dotfiles (templates) to {{ lookup('env','HOME') }} directory
+  template:
+    src: "{{ item }}"
+    dest: "{{ lookup('env','HOME') }}"
+  loop: "{{ templates }}"
