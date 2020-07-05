@@ -1,0 +1,6 @@
+---
+- name: Include apt task in play
+  include: apt.yml
+  tags:
+    - apt
+    - all
