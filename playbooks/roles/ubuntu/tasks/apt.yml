@@ -7,5 +7,5 @@
 - name: Install apt packages
   become: true
   apt:
-    update_cache
+    update_cache: yes
     pkg: "{{ pkg }}"
