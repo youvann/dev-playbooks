@@ -6,9 +6,9 @@
     - roles/dotfiles/vars/macos.yml
 
   roles:
+    - role: macos
+        tags: os
     - role: common
       tags: common
     - role: dotfiles
       tags: dotfiles
-    - role: macos
-      tags: os
