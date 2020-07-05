@@ -1,5 +1,11 @@
 ---
+- name: Install apt repository
+  apt_repository:
+    repo: "{{ repo }}"
+
+
 - name: Install apt packages
   become: true
   apt:
+    update_cache
     pkg: "{{ pkg }}"

@@ -1,4 +1,8 @@
 ---
+
+# gnome terminal : palenight theme
+# toolbox jetbrains
+
 - name: Include apt task in play
   include: apt.yml
   tags:
