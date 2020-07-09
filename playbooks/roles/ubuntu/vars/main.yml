@@ -1,4 +1,10 @@
 ---
 pkg:
+  - git
+  - jq
   - python3-pip
-#  - i3-gaps
+  - rofi
+  - tmux
+  # i3-gaps dependencies
+  - i3status
+  - suckless-tools
