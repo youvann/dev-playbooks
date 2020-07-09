@@ -1,0 +1,56 @@
+# https://wiki.gentoo.org/wiki/SSH_jump_host
+Host *+*
+   ProxyCommand ssh -t $(echo %h | sed 's/+[^+]*$//;s/\([^+%%]*\)%%\([^+]*\)$/\2 -l \1/;s/:/ -p /') exec nc -w600 $(echo %h | sed 's/^.*+//;/:/!s/$/ %p/;s/:/ /')
+
+Host *
+   StrictHostKeyChecking no
+   UserKnownHostsFile=/dev/null
+
+Host youvann-tools
+    Hostname youvann-tools-01.exploit.ec2.youvann.net
+    RequestTTY yes
+    ForwardAgent yes
+    Port 22
+    User kevin
+
+Host sysopstools
+    Hostname youvann-tools-01.exploit.ec2.youvann.net
+    RequestTTY yes
+    ForwardAgent yes
+    Port 22
+    User kevin
+
+Host vpnentrypoint
+    Hostname youvann-tools-01.exploit.ec2.youvann.net
+    RequestTTY yes
+    ForwardAgent yes
+    Port 22
+    User kevin
+
+Host *.exploit.ec2.youvann.net
+    User kevin
+    ProxyCommand ssh -q kevin@youvann-tools nc %h 22
+    ForwardAgent yes
+
+Host *-w3*
+    ProxyCommand ssh -q kevin@youvann-tools nc %h 22
+    ForwardAgent yes
+
+Host youvann-prod-*
+    ProxyCommand ssh -q kevin@youvann-tools nc %h 22
+    ForwardAgent yes
+
+Host gullivan-*
+    ProxyCommand ssh -q kevin@youvann-tools nc %h 22
+    ForwardAgent yes
+
+# youvann-migration-db-pfm-01
+Host 10.129.12.117
+    ProxyCommand ssh -q kevin@youvann-tools nc %h 22
+    ForwardAgent yes
+
+Host youvann-wbx-01
+    Hostname "brid-prod-workerpy-host-01.exploit.ec2.youvann.net"
+    ProxyCommand ssh -q kevin@youvann-tools nc %h 22
+    User fedora
+    IdentityFile /home/kevin/secrets/id_ed25519_prod_brid_wbx_aws

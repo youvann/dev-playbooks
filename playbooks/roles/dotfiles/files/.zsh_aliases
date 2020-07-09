@@ -1,0 +1,45 @@
+# clear
+alias c='clear'
+
+# cd
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+
+# confirmation
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+# grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# ls
+alias ls='ls --color=auto'
+alias la='ls -la -G --color=auto'
+alias ls='ls -G --color=auto'
+alias ll='ls -l -G --color=auto'
+alias rm='rm -i'
+
+# vim
+alias vi='vim'
+
+alias ex="i3-msg exit"
+alias us="~/get-started/set_keyboard.sh us"
+alias fr="~/get-started/set_keyboard.sh fr"
+alias accent="~/get-started/set_keyboard_accent.sh"
+alias wallpaper="/data/wallpaper"
+alias data="cd /data"
+alias control-center="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+
+alias tunnels='ssh \
+	-NL 9932:xxxx.net:5432 \
+	-NL 8443:xxxx.net:8443 \
+	kevin@xxx'
+
+# database
+alias qa.db="ssh -t youvann-tools-01 psql -h 'qa-db-pfm-01.exploit.ec2.youvann.net' -p 5432 -U my_user -d my_database"

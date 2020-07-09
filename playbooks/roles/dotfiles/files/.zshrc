@@ -33,6 +33,8 @@ KEYTIMEOUT=1
 if zplug check zsh-users/zsh-history-substring-search; then
     bindkey '^[[A' history-substring-search-up
     bindkey '^[[B' history-substring-search-down
+    # bindkey '\eOA' history-substring-search-up
+    # bindkey '\eOB' history-substring-search-down
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
