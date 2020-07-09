@@ -1,6 +1,6 @@
 # dev-playbooks
 
-Setup macOS / debian development environment with ansible playbooks
+Setup macOS / ubuntu development environment with ansible playbooks
 
 ```bash
 ansible-playbook ~/dev-playbooks/setup.yml --tags <tags>
