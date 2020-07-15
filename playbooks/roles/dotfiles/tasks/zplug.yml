@@ -1,0 +1,11 @@
+---
+- name: Installing zplug
+  shell: |
+    if [ ! -d ~/.zplug ]
+    then
+      curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+    fi
+  register: zplug_out
+
+- name: Debug zplug_out
+  debug: var=zplug_out

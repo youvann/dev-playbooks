@@ -5,6 +5,10 @@
 
 - name: Include apt task in play
   include: apt.yml
-  tags:
-    - apt
-    - all
+
+- name: Intall starship
+  shell: cargo install starship
+  register: starship_out
+
+- name: Show content of starship task
+  debug: var=starship_out

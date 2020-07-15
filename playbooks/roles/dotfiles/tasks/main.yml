@@ -2,6 +2,12 @@
 - name: Including starship task
   include: starship.yml
 
+- name: Including zplug task
+  include: zplug.yml
+
+- name: Including fzf task
+  include: fzf.yml
+
 - name: Copying dotfiles (files) to {{ lookup('env','HOME') }} directory
   copy:
     src: "{{ item }}"

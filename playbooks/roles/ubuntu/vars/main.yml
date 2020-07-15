@@ -1,10 +1,16 @@
 ---
 pkg:
+  - arandr
+  - cargo
+  - curl
   - git
   - jq
   - python3-pip
   - rofi
+  - slack
   - tmux
+  - vim
+  - zsh
   # i3-gaps dependencies
   - i3status
   - suckless-tools

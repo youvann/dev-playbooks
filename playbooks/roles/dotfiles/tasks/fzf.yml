@@ -1,0 +1,12 @@
+---
+- name: Installing fzf
+  shell: |
+    if [ ! -d ~/.fzf ]
+    then
+      git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+      ~/.fzf/install --all
+    fi
+  register: fzf_out
+
+- name: Debug fzf_out
+  debug: var=fzf_out

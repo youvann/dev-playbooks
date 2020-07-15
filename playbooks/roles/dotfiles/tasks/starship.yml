@@ -1,4 +1,15 @@
 ---
+- name: Installing starship
+  shell: |
+    if [ ! -f /usr/local/bin/starship ]
+    then
+      curl -fsSL https://starship.rs/install.sh | bash /dev/stdin --force
+    fi
+  register: starship_out
+
+- name: Debug starship_out
+  debug: var=starship_out
+
 - name: Copying starship.toml to {{ lookup('env','HOME') }}/.config directory
   copy:
     src: starship.toml

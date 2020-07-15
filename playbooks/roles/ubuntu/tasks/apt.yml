@@ -4,3 +4,7 @@
   apt:
     update_cache: yes
     pkg: "{{ pkg }}"
+  register: aptout
+
+- name: Show content of apt task
+  debug: var=aptout
