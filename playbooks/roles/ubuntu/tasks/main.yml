@@ -3,12 +3,8 @@
 # gnome terminal : palenight theme
 # toolbox jetbrains
 
-- name: Include apt task in play
+- name: Including apt task in play
   include: apt.yml
 
-- name: Intall starship
-  shell: cargo install starship
-  register: starship_out
-
-- name: Show content of starship task
-  debug: var=starship_out
+- name: Including snap task in play
+  include: snap.yml

@@ -1,5 +1,5 @@
 ---
-- name: Install apt packages
+- name: Installing apt packages
   become: true
   apt:
     update_cache: yes
