@@ -12,10 +12,12 @@
   copy:
     src: "{{ item }}"
     dest: "{{ lookup('env','HOME') }}"
+    backup: yes
   loop: "{{ files }}"
 
 - name: Copying dotfiles (templates) to {{ lookup('env','HOME') }} directory
   template:
     src: "{{ item }}"
     dest: "{{ lookup('env','HOME') }}"
+    backup: yes
   loop: "{{ templates }}"
