@@ -3,6 +3,7 @@ pkg:
   - arandr
   - cargo
   - curl
+  - docker
   - git
   - jq
   - python3-pip
@@ -11,9 +12,7 @@ pkg:
   - tmux
   - vim
   - zsh
-  # i3-gaps dependencies
-  - i3status
-  - suckless-tools
 
 snap:
-  - code
+  - code # vscode
+  - postman
