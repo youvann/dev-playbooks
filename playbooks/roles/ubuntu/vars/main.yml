@@ -4,9 +4,11 @@ pkg:
   - cargo
   - curl
   - docker
+  - feh
   - git
   - jq
   - python3-pip
+  - redshift
   - rofi
   - slack
   - tmux
@@ -15,4 +17,3 @@ pkg:
 
 snap:
   - code # vscode
-  - postman

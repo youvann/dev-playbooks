@@ -8,3 +8,6 @@
 
 - name: Including snap task in play
   include: snap.yml
+
+- name: Including config task in play
+  include: config.yml

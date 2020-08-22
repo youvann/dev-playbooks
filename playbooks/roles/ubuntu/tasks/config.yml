@@ -1,0 +1,6 @@
+---
+- name: Copying .config directory
+  copy:
+    src: .config/
+    dest: "{{ lookup('env','HOME') }}/.config"
+    backup: yes
