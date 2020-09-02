@@ -6,6 +6,7 @@ pkg:
   - docker
   - feh
   - git
+  - httpie
   - jq
   - python3-pip
   - redshift
