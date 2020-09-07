@@ -15,6 +15,7 @@ brew_packages:
   - fzf
   - go
   - helm
+  - httpie
   - hugo
   - jq
   # https://github.com/gokcehan/lf
@@ -65,4 +66,5 @@ brew_cask_packages:
   - the-unarchiver
   - transmission
   - virtualbox
+  - visual-studio-code
   - vlc
