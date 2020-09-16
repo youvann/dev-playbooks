@@ -1,5 +1,5 @@
 ---
-pkg:
+apt:
   - arandr
   - cargo
   - curl

@@ -1,10 +1,4 @@
 ---
-- name: Creating ${HOME}/.config directory
-  file:
-    path: ${HOME}/.config
-    state: directory
-    mode: '0755'
-
 - name: "Creating directory $HOME/.virtualenvs"
   file:
     path: $HOME/.virtualenvs
@@ -13,16 +7,10 @@
 
 - name: Installing pip packages
   pip:
-    name:
-      - virtualenv
-      - virtualenvwrapper
-      - fuzzywuzzy
+    name: "{{ pip }}"
     extra_args: --user
   register: pip_install_result
 
 - name: "Content of pip_install_result"
   debug:
     var: pip_install_result
-
-#- name: "Including pass"
-#  include: pass.yml

@@ -32,7 +32,7 @@ alias ex="i3-msg exit"
 alias us="~/get-started/set_keyboard.sh us"
 alias fr="~/get-started/set_keyboard.sh fr"
 alias accent="~/get-started/set_keyboard_accent.sh"
-alias wallpaper="/data/wallpaper"
+alias wallpaper="feh --randomize --recursive --bg-fill ~/Pictures"
 alias data="cd /data"
 alias control-center="env XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 

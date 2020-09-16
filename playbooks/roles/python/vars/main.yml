@@ -1,0 +1,5 @@
+---
+pip:
+  - virtualenv
+  - virtualenvwrapper
+  - fuzzywuzzy

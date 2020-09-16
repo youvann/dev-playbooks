@@ -6,9 +6,8 @@
     - roles/dotfiles/vars/ubuntu.yml
 
   roles:
-    - role: ubuntu
-      tags: os
-    - role: common
-      tags: common
-    - role: dotfiles
-      tags: dotfiles
+    - {role: pkg, tags: ['pkg']}
+    - {role: dotfiles, tags: ['dotfiles']}
+    - {role: python, tags: ['python']}
+    - {role: rofi, tags: ['rofi']}
+    - {role: i3, tags: ['i3']}

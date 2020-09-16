@@ -166,13 +166,12 @@ workspace 9 output eDP-1
 workspace 10 output eDP-1
 
 assign [class="^Gnome-terminal$"] $ws1
-# Assign chrome terminals to workspace 2
-assign [class="^Google-chrome$"] $ws2
 assign [class="^jetbrains-pycharm-ce$"] $ws3
 assign [class="^jetbrains-idea-ce$"] $ws3
 assign [class="^jetbrains-idea$"] $ws3
 assign [class="^sun-awt-X11-XFramePeer$"] $ws3
-assign [class="^Firefox$"] $ws9
+assign [class="^Firefox$"] $ws2
+assign [class="^firefox$"] $ws2
 assign [class="^sublime_text$"] $ws4
 assign [class="^Sublime_text$"] $ws4
 assign [class="^slack$"] $ws5
@@ -180,6 +179,13 @@ assign [class="^Slack$"] $ws5
 assign [class="^discord$"] $ws6
 
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
+
+# for i3-gaps
+gaps inner 10
+#gaps outer 1
+
+# You can also use any non-zero value if you'd like to have a border
+for_window [class=".*"] border pixel 0
 
 # reload the configuration file
 bindsym Mod4+Shift+c reload

@@ -1,0 +1,20 @@
+---
+- name: Installing apt packages
+  become: true
+  apt:
+    update_cache: yes
+    pkg: "{{ apt }}"
+  register: aptout
+
+- name: Show content of apt task
+  debug: var=aptout
+
+- name: Installing snap packages
+  become: true
+  snap:
+    name: "{{ snap }}"
+    classic: yes
+  register: snapout
+
+- name: Show content of snap task
+  debug: var=snapout

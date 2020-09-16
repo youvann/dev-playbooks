@@ -8,3 +8,9 @@
 
 - name: Show content of apt task
   debug: var=aptout
+
+- name: Copying .config directory
+  copy:
+    src: .config/
+    dest: "{{ lookup('env','HOME') }}/.config"
+    backup: yes
