@@ -7,7 +7,7 @@
 
   roles:
     - role: macos
-        tags: os
+      tags: os
     - role: common
       tags: common
     - role: dotfiles
