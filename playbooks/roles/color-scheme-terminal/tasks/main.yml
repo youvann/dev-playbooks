@@ -1,0 +1,27 @@
+---
+- name: Installing apt packages
+  become: true
+  apt:
+    update_cache: yes
+    pkg: 
+      - dconf-cli 
+      - uuid-runtime
+  register: aptout
+
+- name: Show content of apt task
+  debug: var=aptout
+
+- name: Installing color scheme
+  shell: |
+    # clone the repo into "$HOME/.config"
+    mkdir -p "$HOME/.config"
+    cd "$HOME/.config"
+    git clone https://github.com/Mayccoll/Gogh.git gogh
+    cd gogh/themes
+
+    # necessary on ubuntu
+    export TERMINAL=gnome-terminal
+
+    # install themes
+    ./palenight.sh
+    ./dracula.sh

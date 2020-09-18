@@ -21,3 +21,7 @@
     dest: "{{ lookup('env','HOME') }}"
     backup: yes
   loop: "{{ templates }}"
+
+- name: Use zsh shell by default
+  become: true
+  shell: chsh -s $(which zsh)

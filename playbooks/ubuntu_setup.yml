@@ -6,8 +6,9 @@
     - roles/dotfiles/vars/ubuntu.yml
 
   roles:
-    - {role: pkg, tags: ['pkg']}
-    - {role: dotfiles, tags: ['dotfiles']}
-    - {role: python, tags: ['python']}
-    - {role: rofi, tags: ['rofi']}
-    - {role: i3, tags: ['i3']}
+    - {role: pkg, tags: ['pkg', 'base']}
+    - {role: dotfiles, tags: ['dotfiles', 'base']}
+    - {role: python, tags: ['python', 'base']}
+    - {role: rofi, tags: ['rofi', 'unixporn']}
+    - {role: i3, tags: ['i3', 'unixporn']}
+    - {role: color-scheme-terminal, tags: ['color-scheme-terminal', 'unixporn']}
