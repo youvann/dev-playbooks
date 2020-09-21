@@ -6,9 +6,10 @@
     - roles/dotfiles/vars/ubuntu.yml
 
   roles:
-    - {role: pkg, tags: ['pkg', 'base']}
+    - {role: color-scheme-terminal, tags: ['color-scheme-terminal', 'tuning']}
     - {role: dotfiles, tags: ['dotfiles', 'base']}
+    - {role: i3, tags: ['i3', 'tuning']}
+    - {role: jetbrains-toolbox, tags: ['jetbrains-toolbox', 'base']}    
+    - {role: rofi, tags: ['rofi', 'tuning']}
+    - {role: pkg, tags: ['pkg', 'base']}
     - {role: python, tags: ['python', 'base']}
-    - {role: rofi, tags: ['rofi', 'unixporn']}
-    - {role: i3, tags: ['i3', 'unixporn']}
-    - {role: color-scheme-terminal, tags: ['color-scheme-terminal', 'unixporn']}

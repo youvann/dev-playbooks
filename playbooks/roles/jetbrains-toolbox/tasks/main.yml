@@ -1,0 +1,6 @@
+---
+- name: Downloading and extracting tar gz into {{ bin_dir }}
+  unarchive:
+    src: https://download.jetbrains.com/toolbox/{{ filename }}
+    dest: "{{ bin_dir }}"
+    remote_src: yes
