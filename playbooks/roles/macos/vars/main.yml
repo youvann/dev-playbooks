@@ -1,5 +1,6 @@
 ---
 brew_tap:
+  - homebrew/cask-drivers
   - homebrew/cask-fonts
   - AdoptOpenJDK/openjdk
   - amar1729/formulae
@@ -58,6 +59,7 @@ brew_cask_packages:
   - karabiner-elements
   - keybase
   - mactex
+  - philips-hue-sync
   - pock
   - pycharm-ce
   - spark
