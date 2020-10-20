@@ -1,25 +1,37 @@
 # dev-playbooks
 
-Setup macOS / ubuntu development environment with ansible playbooks
+## Setup playbook
 
 ```bash
 ansible-playbook ~/dev-playbooks/setup.yml --tags <tags>
 ```
 
-Tags :
+See [tags](#tags) section for available tags.
 
-* common
-* homebrew
-* homebrew_cask
-* yabai
-
-## Ubuntu playbook
+### Install ubuntu packages
 
 ```sh
-# install ubuntu packages
-ansible-playbook ~/dev-playbooks/playbooks/ubuntu_setup.yml --tags os --ask-become-pass
-ansible-playbook ~/dev-playbooks/playbooks/ubuntu_setup.yml --tags os --extra-vars "ansible_sudo_pass=<your_password>"
+ansible-playbook ~/dev-playbooks/playbooks/ubuntu_setup.yml --tags pkg --ask-become-pass
 
-# install dotfiles on ubuntu
-ansible-playbook ~/dev-playbooks/playbooks/ubuntu_setup.yml --tags dotfiles
+# or
+
+ansible-playbook ~/dev-playbooks/playbooks/ubuntu_setup.yml --tags pkg --extra-vars "ansible_sudo_pass=<your_password>"
 ```
+
+### Install tuning tools (i3, rofi and color-scheme-terminal)
+
+```sh
+ansible-playbook ~/dev-playbooks/playbooks/ubuntu_setup.yml --tags tuning --ask-become-pass
+```
+
+## Tags
+
+* `color-scheme-terminal` [tuning] 
+* `dotfiles`              [base]   
+* `i3`                    [tuning]
+* `jetbrains-toolbox`     [tuning]
+* `rofi`                  [tuning]
+* `pkg`                   [base]   
+* `python`                [base]
+
+`base` and `tuning` are also valid tags. Use them in order to install several items.

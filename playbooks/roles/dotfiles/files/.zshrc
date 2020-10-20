@@ -1,7 +1,7 @@
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
 
-source ~/.zsh_aliases
+source ~/.aliases
 
 #zplug 'dracula/zsh', as:theme # Load theme file
 eval "$(starship init zsh)"
