@@ -18,3 +18,4 @@ apt:
 
 snap:
   - code # vscode
+  - slack
