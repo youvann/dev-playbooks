@@ -6,7 +6,7 @@ files:
   - .tmux-theme-palenight.conf
   - .vimrc
   - .zshrc
-  - .zsh_aliases
+  - .aliases
 
 templates:
   - .zprofile

@@ -6,7 +6,7 @@
     - roles/dotfiles/vars/ubuntu.yml
 
   roles:
-    - {role: color-scheme-terminal, tags: ['color-scheme-terminal', 'tuning']}
+    - {role: color-scheme-terminal, tags: ['color-scheme-terminal']}
     - {role: dotfiles, tags: ['dotfiles', 'base']}
     - {role: i3, tags: ['i3', 'tuning']}
     - {role: jetbrains-toolbox, tags: ['jetbrains-toolbox', 'base']}    

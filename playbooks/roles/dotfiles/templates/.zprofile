@@ -8,3 +8,4 @@ export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUALENVWRAPPER_SCRIPT={{ virtualenvwrapper_script }}
 export VIRTUALENVWRAPPER_PYTHON="$(command \which python3)"
 source {{ virtualenwrapper_lazy }}
+export TERMINAL=gnome-terminal
