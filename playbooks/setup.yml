@@ -1,6 +1,6 @@
 ---
 - hosts: localhost
-  remote_user: youvann
+  remote_user: "{{ remote_user }}"
 
   vars_files:
     - roles/dotfiles/vars/ubuntu.yml
